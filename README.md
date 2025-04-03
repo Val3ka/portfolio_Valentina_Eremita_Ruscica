@@ -19,7 +19,7 @@ Questo è il mio portfolio, mostra i miei progetti, il mio curriculum, i miei co
 ## Link
 
 Clicca qui per visitare il mio portfolio (
-https://val3ka.github.io/Valentina_Eremita_Ruscica_Portfolio/)
+https://val3ka.github.io/portfolio_Valentina_Eremita_Ruscica/)
 
 
 
