@@ -1,0 +1,14 @@
+$primary-color: #7BCAF4;
+$secondary-color: #2c2a2a;
+$tertiary-color: #ffbcef;
+$font-size-large: 32px;
+$font-size-medium: 25px;
+$font-size-small: 18px;
+
+
+@mixin full-width {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
