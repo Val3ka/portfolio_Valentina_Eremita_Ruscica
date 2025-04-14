@@ -1,19 +1,29 @@
-function toggleMobileMenu(menu) {
-    menu.classList.toggle("open");
+function toggleMobileMenu(button) {
     const mobileMenu = document.querySelector(".mobile-menu");
-    if (mobileMenu) {
-        mobileMenu.classList.toggle("open");
-    }
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+  
+    button.classList.toggle("open");
+    mobileMenu.classList.toggle("open");
+
+
+    button.setAttribute("aria-expanded", !isExpanded);
+    mobileMenu.setAttribute("aria-hidden", isExpanded ? "true" : "false");
 }
 
-const menuToggle = document.getElementById("menu-toggle");
-const overlay = document.getElementById("overlay");
-const closeOverlay = document.getElementById("close-overlay");
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        const hamburgerButton = document.getElementById('hamburger-icon');
+        const mobileMenu = document.querySelector('.mobile-menu');
 
-if (menuToggle && overlay && closeOverlay) {
-    menuToggle.addEventListener("click", () => overlay.classList.add("active"));
-    closeOverlay.addEventListener("click", () => overlay.classList.remove("active"));
-}
+        if (hamburgerButton.classList.contains('open')) {
+            hamburgerButton.classList.remove('open');
+            mobileMenu.classList.remove('open');
+            hamburgerButton.setAttribute("aria-expanded", "false");
+            mobileMenu.setAttribute("aria-hidden", "true");
+        }
+    });
+});
 
 
 
@@ -25,16 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 (function() {
-    emailjs.init({
-        publicKey: "service_y6t18ag",
-    });
+    emailjs.init("2vHQrjNc5nh_J9_hq"); 
 })();
 
 window.onload = function() {
-    // Gestione del form di contatto
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
-        emailjs.sendForm('portfolio_gmail', 'template_8h5ea5n', this)
+
+        emailjs.sendForm('service_nxbt5w8', 'template_8h5ea5n', this)
             .then(() => {
                 console.log('SUCCESS!');
             }, (error) => {
@@ -42,7 +50,6 @@ window.onload = function() {
             });
     });
 
-    // Imposta hash se vuoto
     if (window.location.hash === '') {
         window.location.hash = '#home';  
     }
