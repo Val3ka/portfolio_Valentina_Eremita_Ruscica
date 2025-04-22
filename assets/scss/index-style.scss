@@ -90,7 +90,6 @@ header {
     }
 }
 
-
 .mobile-menu {
     display: none; 
     flex-direction: column;
@@ -150,7 +149,6 @@ footer {
     }
 }
 
-
 .home {
     display: flex;
     flex-direction: row;
@@ -162,9 +160,12 @@ footer {
     padding: 50px 20px;
 
     .info {
+        display: flex;
+        flex-direction: column;
         width: 50%;
         max-width: 600px;
-        padding: 70px;
+        gap: 20px;
+        padding: 40px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 
         h1 {
@@ -257,7 +258,7 @@ footer {
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 
             h1 {
-                padding-bottom: 20px;
+                
                 font-family: "Duru sans";
                 color: $tertiary-color;
                 font-size: $font-size-large;
@@ -300,7 +301,7 @@ footer {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 60px;
         padding-top: 60px;
         margin: 0 auto;
         max-width: 100%;
@@ -349,7 +350,6 @@ footer {
         h1 {
             display: flex;
             flex-direction: column;
-            gap: 20px;
             color: $tertiary-color;
             font-size: $font-size-large;
             font-family: "Duru sans";
@@ -403,11 +403,13 @@ footer {
     }
 
     .card-all {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         width: 90%;
         max-width: 1000px;
 
         .card {
-            margin-bottom: 20px;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 
             p {
@@ -490,7 +492,6 @@ footer {
             color: $secondary-color;
             font-size: $font-size-small;
             padding: 12px;
-            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
@@ -522,7 +523,6 @@ footer {
 
     }
 }
-
 
 @media only screen and (max-width: 768px) {
 
@@ -613,9 +613,14 @@ footer {
             padding: 15px;
             margin: 0;
             overflow-x: hidden;
+            gap: 40px;
 
             .home {
                 width: 100vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
 
                 .info {
                     width: 100%;
@@ -626,11 +631,17 @@ footer {
                         margin: auto;
                     }
                 }
+
             }
 
             .mi-presento {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
                 .bio1 {
                     flex-direction: column;
+                    gap: 30px;
                 }
 
                 .skill-h1 {
@@ -642,6 +653,7 @@ footer {
                     width: 90%;
                     flex-wrap: wrap;
                     justify-content: space-evenly;
+                    gap: 30px;
 
                     .skill-img {
                         width: 30%;
